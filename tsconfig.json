@@ -3,7 +3,7 @@
     "allowJs": true,
     "target": "es5",
     "module": "commonjs",
-    "outDir": "./lib/",//打包的目录
+    "outDir": "./lib",//打包的目录
     "declaration": true,//是否生成ts声明文件
     "declarationDir": "./lib/types",//声明文件保存目录
     "strict": true,
@@ -11,5 +11,5 @@
     "lib": ["dom", "es2015"],
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/index.ts"]
 }

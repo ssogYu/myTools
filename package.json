@@ -1,17 +1,29 @@
 {
-  "name": "tool",
+  "name": "yuss-tools",
   "version": "0.0.1",
-  "description": "",
+  "description": "一个轻量的前端工具库",
   "main": "lib/index.js",
-  "types": "lib/types/index.d.ts",
+  "typings": "lib/types/index.d.ts",
   "scripts": {
     "start": "webpack server --mode development --node-env=development --config webpack.config.js",
-    "build": "webpack --mode production --node-env=production --config webpack.config.js",
+    "build": "npm run build:umd && npm run build:esm",
+    "build:umd": "cross-env MODE=production NODE_ENV=production OUTPUT_TYPE=umd webpack --config webpack.config.js",
+    "build:esm": "cross-env MODE=production NODE_ENV=production OUTPUT_TYPE=esm webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": ["前端工具库", "typescript", "webpack", "node"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssogYu/myTools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ssogYu/myTools/issues",
+    "email": "1969728361@qq.com"
+  },
+  "author": "tankswifit",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",

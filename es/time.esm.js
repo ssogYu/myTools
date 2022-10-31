@@ -1,0 +1,1 @@
+var e,r={};e=r,Object.defineProperty(e,"X",{value:!0}),e._=void 0,e._=function(e){return new Promise((function(r){return setTimeout(r,e)}))};var t=r.X,n=r._;export{t as __esModule,n as sleep};
